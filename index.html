@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Animate css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- googleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +28,8 @@
 <body>
     <!-- header -->
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container py-3">
+        <nav class="navbar navbar-expand-lg px-xl-5">
+            <div class="container py-3 px-xl-5">
                 <!-- logo -->
                 <div class="logo-wrapper">
                     <a href="#" class="navbar-brand">
@@ -36,9 +38,9 @@
                 </div>
                 <!-- menu -->
                 <div id="navbarSupportedContent" class="d-lg-block d-none">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav full-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item me-xl-4 me-2">
-                            <a href="#" class="nav-link active" aria-current="page" >HOME</a>
+                            <a href="#" class="nav-link active menu-active" aria-current="page">HOME</a>
                         </li>
                         <li class="nav-item me-xl-4 me-2">
                             <a class="nav-link" href="#">ABOUT</a>
@@ -49,9 +51,9 @@
                         <li class="nav-item me-xl-4 me-2">
                             <a class="nav-link" href="#">SERVICES</a>
                         </li>
-                        <li class="nav-item dropdown me-xl-4 me-2">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PAGES</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="nav-item nav-drop me-xl-4 me-2">
+                            <a class="nav-link" href="#">PAGES</a>
+                            <ul class="dropdown-menu drop1" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">About</a></li>
                                 <li><a class="dropdown-item" href="#">Portfolio</a></li>
                                 <li><a class="dropdown-item" href="#">Blog</a></li>
@@ -73,6 +75,87 @@
                 </div>
             </div>
         </nav>
+
+        <!-- responsive nav -->
+        <div class="px-3 px-md-5 d-lg-none">
+
+            <div class="small-nav container">
+                <div class="text-end">
+                    <a class="fw-bold small-nav-menu navbar-toggler my-2 py-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        MENU
+                        <span class="small-nav-line"></span>
+                    </a>
+                </div>
+                <div class="collapse pb-2" id="navbarToggleExternalContent">
+                    <ul class="navbar-nav small-menu">
+                        <li><a class="dropdown-item" href="#">Home</a></li>
+                        <li><a class="dropdown-item" href="#">About</a></li>
+                        <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                        <li><a class="dropdown-item" href="#">Services</a></li>
+                        <li>
+                            <a class="dropdown-item small-nav-page" href="#">Pages &nbsp;<i
+                                    class="fas fa-caret-right small-arrow"></i></a>
+                            <ul class="small-dropdown" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">About</a></li>
+                                <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crausel -->
+        <div class="container px-lg-5 px-3">
+            <div class="row my-lg-5 px-lg-4">
+                <div id="carouselExampleCaptions" class="carousel slide carousel-fade col-lg-6" data-bs-ride="carousel">
+
+                    <div class="carousel-inner text-white">
+                        <!-- first item -->
+                        <div class="carousel-item active">
+                            <div class="d-block w-100 carousel-animate">
+                                <p class="py-2">FOR WEBSITE AND VIDEO EDITING</p>
+                                <h1 class="display-3">VIDEOGRAPHER’S PORTFOLIO</h1>
+                                <a href="/" class="py-3 px-4 see-more">SEE MORE ABOUT US</a>
+                            </div>
+                        </div>
+                        <!-- second item -->
+                        <div class="carousel-item">
+                            <div class="d-block w-100 carousel-animate">
+                                <p class="py-2">FOR WEBSITE AND VIDEO EDITING</p>
+                                <h1 class="display-3">VIDEOGRAPHER’S PORTFOLIO</h1>
+                                <a href="/" class="py-3 px-4 see-more">SEE MORE ABOUT US</a>
+                            </div>
+                        </div>
+                        <!-- third item -->
+                        <div class="carousel-item">
+                            <div class="d-block w-100 carousel-animate">
+                                <p class="py-2">FOR WEBSITE AND VIDEO EDITING</p>
+                                <h1 class="display-3">VIDEOGRAPHER’S PORTFOLIO</h1>
+                                <a href="/" class="py-3 px-4 see-more">SEE MORE ABOUT US</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-indicators mt-5">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1">01</button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2">02</button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3">03</button>
+                    </div>
+    
+                </div>
+            </div>
+
+        </div>
+
     </header>
 
     <!-- Jquery -->
