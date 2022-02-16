@@ -258,6 +258,7 @@ background-color: #ccc;
 
 .h4-line {
     position: relative;
+    font-weight: 700;
 }
 
 .h4-line::before {
@@ -271,7 +272,7 @@ background-color: #ccc;
     left: 0;
 }
 
-h4, h2,a{
+h4, h2, a{
     font-family: "play",sans-serif;
     color: #fff;
 }
@@ -404,10 +405,46 @@ h4, h2,a{
     content: "";
     border-left: 1px solid #333333;
     border-top: 1px solid #333333;
-    width: 636px;
-    height: 636px;
+    width: 661px;
+    height: 661px;
     bottom: -2px;
     left: -1px;
+    position: absolute;
+}
+
+.counter-item-2::before {
+    display: block;
+    content: "";
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    width: 661px;
+    height: 661px;
+    top: -329px;
+    left: -329px;
+    position: absolute;
+}
+
+.counter-item-3::before {
+    display: block;
+    content: "";
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+    width: 661px;
+    height: 661px;
+    top: -77px;
+    left: -77px;
+    position: absolute;
+}
+
+.counter-item-4::before {
+    display: block;
+    content: "";
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    width: 661px;
+    height: 661px;
+    top: -4px;
+    right: -1px;
     position: absolute;
 }
 
@@ -434,16 +471,126 @@ h4, h2,a{
 display: inline-block;
 }
 
+/* Team */
+
+.team-wrapper {
+    background-image: url('../images/team.webp');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.team {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.team-item {
+    height: 390px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-item:hover .team-hover {
+    bottom: 0px;
+}
+
+.team-hover {
+    background-image: url('../images/team-hover.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    padding: 50px 0  30px 0;
+    width: 100%;
+    bottom: -500px;
+    transition: all 0.5s;
+}
+
+.team-item-icon>a:not(:last-child) {
+    margin-right: 18px;
+}
+
+.team-1 {
+    background-image: url('../images/team-1.webp');
+}
+
+.team-2 {
+    background-image: url('../images/team-2.webp');
+    margin-top: -60px;
+}
+
+.team-3 {
+    background-image: url('../images/team-3.webp');
+    margin-top: -120px;
+}
+
+.team-4 {
+    background-image: url('../images/team-4.webp');
+    margin-top: -180px;
+}
+
+@media screen and (max-width: 1399px) {
+    .counter-item-1::before, .counter-item-2::before , .counter-item-3::before, .counter-item-4::before {
+        width: 623px;
+        height: 623px;
+    }
+    .counter-item-2::before {
+        top: -310px;
+        left: -310px;
+    }
+    .counter-item-3::before {
+        top: -58px;
+        left: -59px;
+    }
+}
+
 @media screen and (max-width: 1199px) {
     .counter-item-1::before, .counter-item-2::before , .counter-item-3::before, .counter-item-4::before {
         display: none;
     }
 }
 
-/* @media (min-width: 1200px){
-.counter-container {
-    max-width: 1200px;
-} */
+@media screen and (max-width: 1199px) and (min-width:991px) {
+    .counter-item-content-1 {
+        transform: translateX(39px);
+    }
+    .counter-item-content-3 {
+        transform: translateX(-40px);
+    }
+    .counter-item-content-4 {
+        transform: translateX(-80px);
+    }
+    .counter-item-2, .counter-item-4 {
+        margin-top: -210px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .counter {
+        padding-top: 100px;
+        padding-bottom: 70px;
+        height: auto;
+    }
+.counter-item {
+    transform: rotate(0deg);
+    width: auto;
+    margin-bottom: 30px;
+}
+.counter-details {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.counter-item-2, .counter-item-4 {
+    margin-top: 0px;
+}
+.team-item {
+    margin-top: auto !important;
+}
+}
 
 @media screen and (max-width: 767px) {
     .work-wrapper {
@@ -458,6 +605,10 @@ display: inline-block;
     }
     .work-7 {
         grid-column: 2/3;
+    }
+    .team {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
     }
 }
 
