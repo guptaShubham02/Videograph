@@ -1,3 +1,10 @@
+// Preloder
+$(window).on('load', function(){
+  $('#loader').fadeOut();
+  $('#preloder').delay(200).fadeOut("slow")
+});
+
+
 $(document).ready(function () {
   $(".small-nav-page").click(function () {
     $(".small-dropdown").slideToggle();
@@ -13,6 +20,12 @@ $(document).ready(function () {
     // options
     itemSelector: ".grid-item, .grid-item-1",
     columnWidth: 0,
+  });
+
+  // Counter
+  $('.counter').counterUp({
+    delay: 10,
+    time: 1200
   });
 });
 
