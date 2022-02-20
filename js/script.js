@@ -46,6 +46,9 @@ $(document).ready(function () {
       320: {
         items: 1,
       },
+      0: {
+        items: 1,
+      }
     },
     dotsEach: true,
     autoplay: true,
